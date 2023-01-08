@@ -1,0 +1,173 @@
+/************** root **************/
+:root {
+    --bg-color: #FFFFFF;
+    --tag-name-color: brown;
+    --short-name-color: green;
+    --attribute-name-color: blue;
+    --attribute-value-color: black;
+    --tag-name-font-size: 20px;
+    --short-name-font-size: 20px;
+    --attribute-name-font-size: 15px;
+    --attribute-value-font-size: 15px;
+
+    /*  */
+    --frame-top-height: 100px;
+    --frame--padding-left: 10px;
+    --frame-lower-padding-bottom: 80vh;
+    --tree-margin-left: 40px;
+    --attribute-margin-left: 50px;
+
+    --filename-background-color: #D1B6E1;
+
+    /* pallete */
+    /* https://www.webdesignrankings.com/resources/lolcolors/ */
+    --color1: #58C9B9;
+    --color2: #9DC8C8;
+    --color3: #519D9E;
+    --color4: #D1B6E1;
+    --color4-deep: #ae58e0;
+    --color5: #a3a1a13b;
+
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--bg-color);
+}
+
+.hidden {
+    display: none;
+    transition: all .3s ease;
+}
+
+/************** frame layout **************/
+.upper {
+    position: absolute;
+    width: calc(100% - var(--frame--padding-left));
+    height: var(--frame-top-height);
+    background-color: var(--color2);
+    padding-left: var(--frame--padding-left);
+}
+
+.lower {
+    position: absolute;
+    /* top: var(--frame-top-heigh); */
+    top: 100px;
+    width: 100%;
+    height: calc(100% - var(--frame-top-height) - var(--frame-lower-padding-bottom));
+    overflow: scroll;
+    padding-bottom: 80vh;
+}
+
+/************** header **************/
+header {
+    font-size: 12px;
+}
+
+/************** controller **************/
+.controller button {
+    background-color: var(--color2);
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 10px;
+    padding: 5px 20px;
+
+}
+
+.controller button:hover {
+    background-color: var(--color3);
+}
+
+/************** filename **************/
+.filename{
+    width: 100%;
+    background-color: var(--filename-background-color);
+}
+
+/************** tree_item **************/
+.tree_item {
+    margin-left: 2px;
+    border-left: 1px solid rgba(128, 128, 128, 0.192);
+    background-color: rgba(134, 233, 77, 0.205);
+}
+.tree_item :hover{
+    /* background-color: var(--color5); */
+    /* background-color: rgba(128, 128, 128, 0.041); */
+    background-color: rgba(218, 165, 50, 0.041);
+}
+
+/************** tree_item menu button**************/
+.tree_item .title_menu_button{
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    margin: 0;
+    padding: 0 3px;
+}
+.tree_item .title_menu_button img{
+    /* object-fit: cover; */
+    width: 10px;
+
+}
+
+
+/************** tree_item title **************/
+.tree_item>.title {
+    display: flex;
+    /* gap: 10px; */
+    /* align-items: flex-end; */
+    align-items: center;
+}
+
+.tree_item .title :hover {
+    background-color: var(--color5);
+}
+
+.tree_item>.title .title_checkbox {}
+
+.tree_item>.title>.tag_name {
+    color: var(--tag-name-color);
+    font-size: var(--tag-name-font-size);
+    font-weight: bold;
+}
+
+.tree_item>.title>.short_name {
+    color: var(--short-name-color);
+    font-size: var(--short-name-font-size);
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+
+/************** attributes *************/
+.tree_item>.attributes {
+    margin-left: var(--attribute-margin-left);
+}
+
+.tree_item>.attributes>.attributes_table {
+    border-spacing: 0;
+}
+
+.tree_item>.attributes>.attributes_table>tbody>.attribute_item>.attribute_name {
+    color: var(--attribute-name-color);
+    font-size: var(--attribute-name-font-size);
+    font-weight: bold;
+}
+
+.tree_item>.attributes>.attributes_table>tbody>.attribute_item>.attribute_value {
+    color: var(--attribute-value-color);
+    font-size: var(--attribute-value-font-size);
+    padding-left: 10px
+}
+
+
+
+/************** tree_item children **************/
+.tree_item>.children {
+    margin-left: var(--tree-margin-left);
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!---------------------------------------------------- MAIN ---------------------------------------------------->
+    <div class="layout">
+        
+        <!-- upper -->
+        <div class="upper">
+            <header>
+                <h1>arxml viewer</h1>
+            </header>
+            <div class="controller">
+                <input type="file" id="add_file" multiple>
+            </div>
+        </div>
+        
+        <!-- lower -->
+        <div class="lower">
+            <div id="main"></div>
+            <div id="tree"></div>
+            <div id="tree2"></div>
+        </div>
+
+    </div>
+
+
+    <!---------------------------------------------------- TEMPLATE ---------------------------------------------------->
+    <div id="tree_template" hidden>
+        <div class="tree_item">
+            <div class="title">
+                <span><input type="checkbox" class="title_checkbox" checked></span>
+                <button class="title_menu_button"><img src="Hamburger_icon.svg" alt=""></button>
+                <div class="tag_name">tag_name</div><div class="short_name">short_name</div>
+            </div>
+            <div class="attributes">
+                <table class="attributes_table">
+                    <tbody>
+                        <tr class="attribute_item"><td class="attribute_name">attribute_name</td><td class="attribute_value">attribute_value</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="children">children</div>
+        </div>
+    </div>
+
+    <!---------------------------------------------------- SCRIPT ---------------------------------------------------->
+    <script src="main.js"></script>
+
+</body>
+</html>
