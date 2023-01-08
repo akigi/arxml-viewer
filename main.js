@@ -494,17 +494,13 @@ window.addEventListener("load", e => {
     var files = [];
     let add_file_button = document.querySelector("#add_file");
     add_file_button.addEventListener("change", e => {
-        
-        
         files.push(...e.target.files);
-        for(let file of files){
+        for(let file of e.target.files){
             console.log(file);
             var reader = new FileReader();
             reader.onload = e => {
                 console.log(e)
                 xml_string = e.target.result;
-
-                
                 tree_view = new TreeViewXML("#main", xml_string, {filename: file.name});
             };
 
