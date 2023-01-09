@@ -15,7 +15,7 @@ let TEMPLATE = `<!DOCTYPE html>
         
         <!-- upper -->
         <div class="upper">
-            <header>
+            <header hidden>
                 <h1>arxml viewer</h1>
             </header>
             <div class="controller">

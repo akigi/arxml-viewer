@@ -11,7 +11,7 @@
     --attribute-value-font-size: 15px;
 
     /*  */
-    --frame-top-height: 100px;
+    --frame-top-height: 30px;
     --frame--padding-left: 10px;
     --frame-lower-padding-bottom: 80vh;
     --tree-margin-left: 40px;
@@ -53,12 +53,14 @@ html {
     height: var(--frame-top-height);
     background-color: var(--color2);
     padding-left: var(--frame--padding-left);
+    vertical-align: center;
+    display: table;
 }
 
 .lower {
     position: absolute;
     /* top: var(--frame-top-heigh); */
-    top: 100px;
+    top: 30px;
     width: 100%;
     height: calc(100% - var(--frame-top-height) - var(--frame-lower-padding-bottom));
     overflow: scroll;
@@ -71,6 +73,12 @@ header {
 }
 
 /************** controller **************/
+.controller{
+    display: table-cell;
+    vertical-align: middle;
+}
+.controller input{
+}
 .controller button {
     background-color: var(--color2);
     border: none;
